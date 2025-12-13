@@ -1,6 +1,6 @@
 {
   "name": "obsidian-rclone-bridge",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "description": "Obsidian 插件：通过本地 rclone 命令实现双向同步的 GUI 包装器。",
   "main": "main.js",
   "scripts": {

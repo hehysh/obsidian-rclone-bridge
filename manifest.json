@@ -1,7 +1,7 @@
 {
   "id": "obsidian-rclone-bridge",
   "name": "Obsidian Rclone Bridge",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "minAppVersion": "1.4.16",
   "description": "使用本地 rclone 命令为 Obsidian 提供双向同步的桥接插件。",
   "author": "hehysh",
