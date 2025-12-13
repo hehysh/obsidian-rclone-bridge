@@ -1,0 +1,23 @@
+{
+  "name": "obsidian-rclone-bridge",
+  "version": "0.1.0",
+  "description": "Obsidian 插件：通过本地 rclone 命令实现双向同步的 GUI 包装器。",
+  "main": "main.js",
+  "scripts": {
+    "dev": "powershell -NoProfile -Command \"New-Item -ItemType Directory -Force -Path 'E:\\Geek\\Note\\.obsidian\\plugins\\obsidian-rclone-bridge' | Out-Null; Copy-Item manifest.json 'E:\\Geek\\Note\\.obsidian\\plugins\\obsidian-rclone-bridge\\manifest.json' -Force; esbuild main.ts --bundle --format=cjs --platform=node --target=es2020 --external:obsidian --sourcemap --outfile='E:\\Geek\\Note\\.obsidian\\plugins\\obsidian-rclone-bridge\\main.js' --watch\"",
+    "build": "esbuild main.ts --bundle --outfile=main.js --format=cjs --platform=node --target=es2020 --external:obsidian --sourcemap"
+  },
+  "keywords": [
+    "obsidian",
+    "rclone",
+    "sync",
+    "bisync"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "esbuild": "^0.24.0",
+    "obsidian": "^1.7.0",
+    "typescript": "^5.6.2"
+  }
+}
