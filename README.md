@@ -22,8 +22,8 @@
 ## 开发
 - 安装依赖：`npm install`
 - 开发热更新：`npm run dev`
-  - 当前脚本会 watch `main.ts` 并将 `main.js` 与 `manifest.json` 输出到 `E:\Geek\Note\.obsidian\plugins\obsidian-rclone-bridge`。
-  - 若你的 Vault 路径不同，请修改 `package.json` 中 `dev` 脚本的目标路径。
+  - 请先设置环境变量 `OBSIDIAN_PLUGIN_DIR` 为你的 Vault 插件目录（例如 `D:\MyVault\.obsidian\plugins\obsidian-rclone-bridge`）。
+  - 脚本会 watch `main.ts` 并把 `main.js` 与 `manifest.json` 输出到该目录。
 - 构建：`npm run build`（输出到仓库根目录 `main.js`）。
 
 ## 同步行为说明

@@ -1,0 +1,45 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - '*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Collect assets
+        id: assets
+        shell: bash
+        run: |
+          set -e
+          ASSETS=$'main.js\nmanifest.json'
+          if [ -f styles.css ]; then
+            ASSETS="$ASSETS"$'\n'styles.css
+          fi
+          printf "list<<EOF\n%s\nEOF\n" "$ASSETS" >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ steps.assets.outputs.list }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

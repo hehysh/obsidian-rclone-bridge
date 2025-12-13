@@ -1,11 +1,12 @@
 {
   "id": "obsidian-rclone-bridge",
   "name": "Obsidian Rclone Bridge",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "minAppVersion": "1.4.16",
   "description": "使用本地 rclone 命令为 Obsidian 提供双向同步的桥接插件。",
-  "author": "Obsidian Rclone Bridge Team",
-  "authorUrl": "https://rclone.org",
+  "author": "hehysh",
+  "authorUrl": "https://github.com/hehysh/obsidian-rclone-bridge",
+  "fundingUrl": "https://github.com/hehysh/obsidian-rclone-bridge",
   "isDesktopOnly": true,
   "main": "main.js"
 }
