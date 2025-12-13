@@ -1,11 +1,11 @@
 {
   "name": "obsidian-rclone-bridge",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Obsidian 插件：通过本地 rclone 命令实现双向同步的 GUI 包装器。",
   "main": "main.js",
   "scripts": {
     "dev": "powershell -NoProfile -Command \"$outDir=$env:OBSIDIAN_PLUGIN_DIR; if (-not $outDir) { Write-Error '请先设置环境变量 OBSIDIAN_PLUGIN_DIR 指向你的 vault 插件目录'; exit 1 }; New-Item -ItemType Directory -Force -Path $outDir | Out-Null; Copy-Item manifest.json (Join-Path $outDir 'manifest.json') -Force; $outFile = Join-Path $outDir 'main.js'; esbuild main.ts --bundle --format=cjs --platform=node --target=es2020 --external:obsidian --sourcemap --outfile=$outFile --watch\"",
-    "build": "esbuild main.ts --bundle --outfile=main.js --format=cjs --platform=node --target=es2020 --external:obsidian --sourcemap"
+    "build": "esbuild main.ts --bundle --outfile=main.js --format=cjs --platform=node"
   },
   "keywords": [
     "obsidian",
