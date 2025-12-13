@@ -31,7 +31,6 @@ jobs:
           files: |
             main.js
             manifest.json
-            styles.css
             versions.json
           draft: false
           prerelease: false
