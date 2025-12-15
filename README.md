@@ -1,6 +1,6 @@
 # Obsidian Rclone Bridge
 
-> 非常好插件，这使我避免remotely save会员才能同步google drive/onedrive的弊端。你现在可以通过此插件免费使用rclone支持的30多种云存储类型，本插件同时支持一次性同步到多个云存储，和自己选择同步方式的功能。你需要先配置好rclone再下载本插件。
+> 非常好插件，这使我避免obsidian目前最常用的同步插件remotely save需要会员才能同步google drive/onedrive的弊端。你现在可以通过此插件免费使用rclone支持的30多种云存储类型以在obsidian中完成同步任务，本插件同时支持一次性同步到多个云存储，和自己选择同步方式的功能。你需要先配置好rclone再下载本插件。
 
 ## 功能
 - 多目的地双向同步：为每个 Remote 配置名称、路径、启用开关，顺序执行 `rclone bisync`，单个失败不阻断其他。
